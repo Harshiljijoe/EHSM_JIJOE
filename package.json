@@ -1,0 +1,24 @@
+{
+  "name": "ehsm",
+  "version": "0.0.1",
+  "description": "An SAP Fiori application.",
+  "keywords": [
+    "ui5",
+    "openui5",
+    "sapui5"
+  ],
+  "main": "webapp/index.html",
+  "dependencies": {},
+  "devDependencies": {
+    "@ui5/cli": "^4.0.33",
+    "@sap/ux-ui5-tooling": "1",
+    "@sap-ux/ui5-middleware-fe-mockserver": "2"
+  },
+  "scripts": {
+    "start": "npx ui5 serve --port 5000 --open /index.html",
+    "start-local": "npx ui5 serve --config ./ui5-local.yaml --port 5000 --open /index.html",
+    "build": "ui5 build --config=ui5.yaml --clean-dest --dest dist",
+    "start-noflp": "npx ui5 serve --port 5000 --open /index.html"
+  },
+  "sapuxLayer": "CUSTOMER_BASE"
+}

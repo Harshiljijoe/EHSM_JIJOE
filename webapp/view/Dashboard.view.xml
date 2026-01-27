@@ -1,0 +1,26 @@
+<mvc:View controllerName="com.kaar.ehsm.controller.Dashboard"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page title="EHSM Dashboard">
+        <headerContent>
+            <Button text="Logout" press="onLogout"/>
+        </headerContent>
+        <content>
+            <VBox class="sapUiLargeMargin">
+                <Title text="Safety Engineer Portal" level="H2"/>
+                <TileContainer>
+                    <StandardTile 
+                        title="Incident Management" 
+                        info="View incidents"
+                        icon="sap-icon://alert"
+                        press="onIncidentPress"/>
+                    <StandardTile 
+                        title="Risk Assessment" 
+                        info="View risks"
+                        icon="sap-icon://warning"
+                        press="onRiskPress"/>
+                </TileContainer>
+            </VBox>
+        </content>
+    </Page>
+</mvc:View>

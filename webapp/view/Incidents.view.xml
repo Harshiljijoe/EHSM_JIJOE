@@ -1,0 +1,40 @@
+<mvc:View controllerName="com.kaar.ehsm.controller.Incidents"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page title="Incident Management" showNavButton="true" navButtonPress="onNavBack">
+        <headerContent>
+            <Button text="Logout" press="onLogout"/>
+        </headerContent>
+        <content>
+            <Table items="{/incidents}">
+                <headerToolbar>
+                    <Toolbar>
+                        <Title text="Incidents"/>
+                        <ToolbarSpacer/>
+                        <Button text="Refresh" press="onRefresh"/>
+                    </Toolbar>
+                </headerToolbar>
+                <columns>
+                    <Column><Text text="ID"/></Column>
+                    <Column><Text text="Description"/></Column>
+                    <Column><Text text="Category"/></Column>
+                    <Column><Text text="Priority"/></Column>
+                    <Column><Text text="Status"/></Column>
+                    <Column><Text text="Date"/></Column>
+                </columns>
+                <items>
+                    <ColumnListItem>
+                        <cells>
+                            <Text text="{IncidentId}"/>
+                            <Text text="{IncidentDescription}"/>
+                            <Text text="{IncidentCategory}"/>
+                            <Text text="{IncidentPriority}"/>
+                            <Text text="{IncidentStatus}"/>
+                            <Text text="{IncidentDate}"/>
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+        </content>
+    </Page>
+</mvc:View>

@@ -1,0 +1,22 @@
+specVersion: '3.0'
+metadata:
+  name: ehsm
+type: application
+server:
+  customMiddleware:
+    - name: fiori-tools-proxy
+      afterMiddleware: compression
+      configuration:
+        backend:
+          - path: /sap
+            url: http://172.17.19.24:8000
+            client: '100'
+            auth:
+              username: k901813
+              password: Nithiesh@10
+    - name: fiori-tools-appreload
+      afterMiddleware: compression
+      configuration:
+        port: 35729
+        path: webapp
+        delay: 300

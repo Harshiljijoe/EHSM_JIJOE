@@ -1,0 +1,24 @@
+<mvc:View controllerName="com.kaar.ehsm.controller.Login"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page title="EHSM Portal - Login">
+        <content>
+            <VBox alignItems="Center" justifyContent="Center" class="sapUiLargeMarginTop">
+                <Panel width="400px">
+                    <headerToolbar>
+                        <Toolbar><Title text="Safety Engineer Login"/></Toolbar>
+                    </headerToolbar>
+                    <content>
+                        <VBox class="sapUiMediumMargin">
+                            <Label text="Employee ID:"/>
+                            <Input id="employeeId" placeholder="Enter Employee ID"/>
+                            <Label text="Password:"/>
+                            <Input id="password" type="Password" placeholder="Enter Password"/>
+                            <Button text="Login" press="onLogin" type="Emphasized" width="100%" class="sapUiMediumMarginTop"/>
+                        </VBox>
+                    </content>
+                </Panel>
+            </VBox>
+        </content>
+    </Page>
+</mvc:View>
